@@ -1,6 +1,7 @@
 import { Age } from './../js/age.js';
 import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
+// import '../img/bg.jpeg';
 import './styles.css';
 
 

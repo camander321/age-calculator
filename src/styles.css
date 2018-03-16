@@ -1,3 +1,14 @@
 body {
-  background-color: #1e4e93;
+  background-image: url("../img/bg.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  color: blue;
+}
+
+.container {
+  background-color: #000000cc;
+  padding: 50px;
+  margin-top: 50px;
 }
