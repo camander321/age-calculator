@@ -5,5 +5,5 @@ import './styles.css';
 
 
 $(document).ready(function() {
-  console.log("Hello World");
+  
 });
