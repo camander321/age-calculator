@@ -5,7 +5,7 @@ describe('Age', function() {
   let age;
 
   beforeEach(function() {
-    age = new Age();
+    age = new Age(new Date("03/16/2018"));
   });
 
 
@@ -28,7 +28,15 @@ describe('Age', function() {
   });
 
   it('should take a date and a planet and return the number', function() {
-    expect(age.getYearsOnPlanet('mars', 753062400)).toEqual(12.6934137715566);
+    expect(age.getYearsOnPlanet('Mars', 753062400)).toEqual(12.6934137715566);
   });
 
+  it('should give your age on a given planet', function() {
+    expect(age.getAgeOnPlanet('05/05/1994', 'Mars')).toEqual('Your age on Mars is 12.69 years.');
+  });
+
+  it('should give your remaining life on a given planet', function() {
+    expect(age.getRemainingOnPlanet('05/05/1994', 87, 'Earth')).toEqual('You will probably live for another 63.13 years!');
+    expect(age.getRemainingOnPlanet('05/05/1900', 87, 'Earth')).toEqual('You have surpassed your life expectancy by -30.87 years! Good Job!');
+  });
 });

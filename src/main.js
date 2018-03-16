@@ -1,9 +1,18 @@
-// import { Game } from './../js/game.js';
+import { Age } from './../js/age.js';
 import $ from 'jquery';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './styles.css';
 
 
 $(document).ready(function() {
-  console.log(new Date('05/05/1900').getTime());
+  $('#form').submit(function(event) {
+    event.preventDefault();
+
+    var birthday = $('#birthday').val();
+    var expectancy = $('#expectancy').val();
+    var planet = $('#planet').val();
+
+    var age = new Age(new Date());
+    console.log(age.getYearsOnPlanet(birthday, planet));
+  });
 });
