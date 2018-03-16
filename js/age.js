@@ -53,6 +53,6 @@ export class Age {
     remaining = Math.floor(remaining * 100) / 100;
     return remaining >= 0 ?
       `You will probably live for another ${remaining} years!` :
-      `You have surpassed your life expectancy by ${remaining} years! Good Job!` ;
+      `You have surpassed your life expectancy by ${-remaining} years! Good Job!` ;
   }
 }

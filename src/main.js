@@ -5,14 +5,15 @@ import './styles.css';
 
 
 $(document).ready(function() {
-  $('#form').submit(function(event) {
-    event.preventDefault();
+  $('#button').click(function() {
 
     var birthday = $('#birthday').val();
-    var expectancy = $('#expectancy').val();
+    var expectancy = parseInt($('#expectancy').val());
     var planet = $('#planet').val();
 
     var age = new Age(new Date());
-    console.log(age.getYearsOnPlanet(birthday, planet));
+    $("#output").text('');
+    $("#output").append(`<h4>${age.getAgeOnPlanet(birthday, planet)}</h4>`);
+    $("#output").append(`<h4>${age.getRemainingOnPlanet(birthday, expectancy, planet)}</h4>`);
   });
 });

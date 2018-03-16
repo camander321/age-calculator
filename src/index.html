@@ -6,17 +6,25 @@
   <body>
     <div class="container">
       <h1>Age Calulator</h1>
-      <form class="form" action="index.html" method="post">
-        <input type="date" id="birthday" placeholder="Enter Your Birthday">
-        <input type="date" id="expectancy" placeholder="Enter Your Life Expectancy">
-        <select id="planet">
+      <div style="width: 500px;">
+        <label for="date">What is your birthday?</label>
+        <input class="form-control" name="date" type="date" id="birthday" placeholder="Enter Your Birthday"><br>
+
+        <label for="expectancy">How long do you expect to live?</label>
+        <input class="form-control" name="expectancy" type="number" id="expectancy" placeholder="Enter Your Life Expectancy"><br>
+
+        <label for="planet">What planet are you on?</label>
+        <select class="form-control" id="planet" name="planet">
           <option value="Mercury">Mercury</option>
           <option value="Venus">Venus</option>
           <option value="Earth">Earth</option>
           <option value="Mars">Mars</option>
           <option value="Jupiter">Jupiter</option>
-        </select>
-      </form>
+        </select><br>
+
+        <button class="form-control btn btn-success" id="button" type="button" name="button">GO!</button>
+      </div>
+      <div id="output"></div>
     </div>
   </body>
 </html>
