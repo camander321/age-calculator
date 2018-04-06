@@ -37,6 +37,6 @@ describe('Age', function() {
 
   it('should give your remaining life on a given planet', function() {
     expect(age.getRemainingOnPlanet('05/05/1994', 87, 'Earth')).toEqual('You will probably live for another 63.13 years!');
-    expect(age.getRemainingOnPlanet('05/05/1900', 87, 'Earth')).toEqual('You have surpassed your life expectancy by -30.87 years! Good Job!');
+    expect(age.getRemainingOnPlanet('05/05/1900', 87, 'Earth')).toEqual('You have surpassed your life expectancy by 30.87 years! Good Job!');
   });
 });
